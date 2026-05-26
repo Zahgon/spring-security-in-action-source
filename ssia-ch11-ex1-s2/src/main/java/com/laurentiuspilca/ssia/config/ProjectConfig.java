@@ -9,6 +9,6 @@ public class ProjectConfig {
 
     @Bean
     public RestTemplate restTemplate() {
-        return new RestTemplate();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

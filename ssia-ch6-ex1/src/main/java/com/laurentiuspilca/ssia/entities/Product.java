@@ -1,7 +1,6 @@
 package com.laurentiuspilca.ssia.entities;
 
 import com.laurentiuspilca.ssia.entities.enums.Currency;
-
 import javax.persistence.*;
 
 @Entity
@@ -12,40 +11,41 @@ public class Product {
     private Integer id;
 
     private String name;
+
     private double price;
 
     @Enumerated(EnumType.STRING)
     private Currency currency;
 
     public Integer getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public double getPrice() {
-        return price;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Currency getCurrency() {
-        return currency;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCurrency(Currency currency) {
-        this.currency = currency;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

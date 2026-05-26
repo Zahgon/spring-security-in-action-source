@@ -10,7 +10,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
 import javax.crypto.SecretKey;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -28,26 +27,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        String jwt = request.getHeader("Authorization");
-
-        SecretKey key = Keys.hmacShaKeyFor(signingKey.getBytes(StandardCharsets.UTF_8));
-        Claims claims = Jwts.parserBuilder()
-                .setSigningKey(key)
-                .build()
-                .parseClaimsJws(jwt)
-                .getBody();
-
-        String username = String.valueOf(claims.get("username"));
-
-        GrantedAuthority a = new SimpleGrantedAuthority("user");
-        var auth = new UsernamePasswordAuthentication(username, null, List.of(a));
-        SecurityContextHolder.getContext().setAuthentication(auth);
-
-        filterChain.doFilter(request, response);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        return request.getServletPath().equals("/login");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

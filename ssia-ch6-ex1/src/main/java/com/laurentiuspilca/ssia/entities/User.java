@@ -1,7 +1,6 @@
 package com.laurentiuspilca.ssia.entities;
 
 import com.laurentiuspilca.ssia.entities.enums.EncryptionAlgorithm;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,6 +12,7 @@ public class User {
     private Integer id;
 
     private String username;
+
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -22,42 +22,42 @@ public class User {
     private List<Authority> authorities;
 
     public Integer getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getPassword() {
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EncryptionAlgorithm getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAlgorithm(EncryptionAlgorithm algorithm) {
-        this.algorithm = algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Authority> getAuthorities() {
-        return authorities;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAuthorities(List<Authority> authorities) {
-        this.authorities = authorities;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

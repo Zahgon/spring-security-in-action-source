@@ -6,7 +6,9 @@ import java.util.Objects;
 public class Employee {
 
     private String name;
+
     private List<String> books;
+
     private List<String> roles;
 
     public Employee(String name, List<String> books, List<String> roles) {
@@ -16,41 +18,36 @@ public class Employee {
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getBooks() {
-        return books;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooks(List<String> books) {
-        this.books = books;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getRoles() {
-        return roles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRoles(List<String> roles) {
-        this.roles = roles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return Objects.equals(name, employee.name) &&
-                Objects.equals(books, employee.books) &&
-                Objects.equals(roles, employee.roles);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, books, roles);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -18,28 +18,10 @@ public class AuthenticationServerProxy {
     private String baseUrl;
 
     public void sendAuth(String username, String password) {
-        String url = baseUrl + "/user/auth";
-
-        var body = new User();
-        body.setUsername(username);
-        body.setPassword(password);
-
-        var request = new HttpEntity<>(body);
-
-        rest.postForEntity(url, request, Void.class);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean sendOTP(String username, String code) {
-        String url = baseUrl + "/otp/check";
-
-        var body = new User();
-        body.setUsername(username);
-        body.setCode(code);
-
-        var request = new HttpEntity<>(body);
-
-        var response = rest.postForEntity(url, request, Void.class);
-
-        return response.getStatusCode().equals(HttpStatus.OK);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

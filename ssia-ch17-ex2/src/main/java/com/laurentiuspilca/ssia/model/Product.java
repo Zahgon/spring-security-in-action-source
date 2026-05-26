@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Product {
 
     private String name;
+
     private String owner;
 
     public Product(String name, String owner) {
@@ -13,32 +14,28 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getOwner() {
-        return owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setOwner(String owner) {
-        this.owner = owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(name, product.name) &&
-                Objects.equals(owner, product.owner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, owner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -9,7 +9,6 @@ public class ProductController {
 
     @GetMapping("/product/{code}")
     public String productCode(@PathVariable String code) {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

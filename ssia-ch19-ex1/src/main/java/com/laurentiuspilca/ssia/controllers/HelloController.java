@@ -10,7 +10,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public Mono<String> hello(Mono<Authentication> auth) {
-        Mono<String> message = auth.map(a -> "Hello " + a.getName());
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

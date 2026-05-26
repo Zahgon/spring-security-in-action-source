@@ -8,6 +8,6 @@ public class NameService {
 
     @PreAuthorize("hasAuthority('write')")
     public String getName() {
-        return "Fantastico";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

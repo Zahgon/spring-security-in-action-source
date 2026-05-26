@@ -8,18 +8,16 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @GetMapping("/ciao")
     public String ciao() {
-        return "Ciao!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 
     @GetMapping("/hola")
     public String hola() {
-        return "Hola!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

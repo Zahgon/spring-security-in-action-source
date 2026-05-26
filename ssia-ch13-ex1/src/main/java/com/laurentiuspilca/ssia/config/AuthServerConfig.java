@@ -11,44 +11,37 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthServerConfig
-        extends AuthorizationServerConfigurerAdapter {
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .secret("secret")
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("read");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-//    @Override
-//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-//        var service = new InMemoryClientDetailsService();
-//
-//        var cd = new BaseClientDetails();
-//        cd.setClientId("client");
-//        cd.setClientSecret("secret");
-//        cd.setScope(List.of("read"));
-//        cd.setAuthorizedGrantTypes(List.of("password"));
-//
-//        service.setClientDetailsStore(Map.of("client", cd));
-//
-//        clients.withClientDetails(service);
-//    }
-
-
+    //    @Override
+    //    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+    //        var service = new InMemoryClientDetailsService();
+    //
+    //        var cd = new BaseClientDetails();
+    //        cd.setClientId("client");
+    //        cd.setClientSecret("secret");
+    //        cd.setScope(List.of("read"));
+    //        cd.setAuthorizedGrantTypes(List.of("password"));
+    //
+    //        service.setClientDetailsStore(Map.of("client", cd));
+    //
+    //        clients.withClientDetails(service);
+    //    }
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints.authenticationManager(authenticationManager);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) {
-        security.checkTokenAccess("isAuthenticated()");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

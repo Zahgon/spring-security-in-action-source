@@ -18,23 +18,21 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public SCryptPasswordEncoder sCryptPasswordEncoder() {
-        return new SCryptPasswordEncoder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
-        auth.authenticationProvider(authenticationProvider);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin()
-            .defaultSuccessUrl("/main", true);
-        http.authorizeRequests().anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

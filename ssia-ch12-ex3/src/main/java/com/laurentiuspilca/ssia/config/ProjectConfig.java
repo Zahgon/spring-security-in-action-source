@@ -9,10 +9,6 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.oauth2Login();
-
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

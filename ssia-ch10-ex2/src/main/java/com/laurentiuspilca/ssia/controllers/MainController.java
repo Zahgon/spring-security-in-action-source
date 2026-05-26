@@ -8,7 +8,6 @@ public class MainController {
 
     @GetMapping("/main")
     public String main() {
-        return "main.html";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

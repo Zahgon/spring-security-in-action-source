@@ -10,34 +10,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
-@EnableGlobalMethodSecurity(
-        jsr250Enabled = true,
-        securedEnabled = true
-)
+@EnableGlobalMethodSecurity(jsr250Enabled = true, securedEnabled = true)
 public class ProjectConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        var service = new InMemoryUserDetailsManager();
-
-        var u1 = User.withUsername("natalie")
-                    .password("12345")
-                    .roles("ADMIN")
-                .build();
-
-        var u2 = User.withUsername("emma")
-                    .password("12345")
-                    .roles("MANAGER")
-                .build();
-
-        service.createUser(u1);
-        service.createUser(u2);
-
-        return service;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

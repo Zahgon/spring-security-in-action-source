@@ -9,7 +9,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public Mono<String> hello() {
-        return Mono.just("Hello!");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

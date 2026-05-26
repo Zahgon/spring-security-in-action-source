@@ -26,24 +26,12 @@ public class AuthenticationProviderService implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getName();
-        String password = authentication.getCredentials().toString();
-
-        CustomUserDetails user = userDetailsService.loadUserByUsername(username);
-
-        switch (user.getUser().getAlgorithm()) {
-            case BCRYPT:
-                return checkPassword(user, password, bCryptPasswordEncoder);
-            case SCRYPT:
-                return checkPassword(user, password, sCryptPasswordEncoder);
-        }
-
-        throw new  BadCredentialsException("Bad credentials");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return UsernamePasswordAuthenticationToken.class.isAssignableFrom(aClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Authentication checkPassword(CustomUserDetails user, String rawPassword, PasswordEncoder encoder) {

@@ -4,7 +4,6 @@ import com.laurentiuspilca.ssia.entities.Workout;
 import com.laurentiuspilca.ssia.service.WorkoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -16,16 +15,16 @@ public class WorkoutController {
 
     @PostMapping("/")
     public void add(@RequestBody Workout workout) {
-        workoutService.saveWorkout(workout);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @GetMapping("/")
     public List<Workout> findAll() {
-        return workoutService.findWorkouts();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        workoutService.deleteWorkout(id);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -16,19 +16,11 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
     @Override
     @Bean
     public UserDetailsService userDetailsService() {
-        var cs = new DefaultSpringSecurityContextSource("ldap://127.0.0.1:33389/dc=springframework,dc=org");
-        cs.afterPropertiesSet();
-
-        LdapUserDetailsManager manager = new LdapUserDetailsManager(cs);
-        manager.setUsernameMapper(
-                new DefaultLdapUsernameToDnMapper("ou=groups", "uid"));
-        manager.setGroupSearchBase("ou=groups");
-        return manager;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

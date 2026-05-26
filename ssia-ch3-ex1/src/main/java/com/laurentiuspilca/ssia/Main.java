@@ -9,18 +9,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class Main {
 
     public void m() {
-        UserDetails u = User.withUsername("bill")
-                .password("12345")
-                .authorities("read", "write")
-                .accountExpired(false)
-                .disabled(true)
-                .build();
-
-
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

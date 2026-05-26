@@ -8,21 +8,22 @@ public class Otp {
 
     @Id
     private String username;
+
     private String code;
 
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCode(String code) {
-        this.code = code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

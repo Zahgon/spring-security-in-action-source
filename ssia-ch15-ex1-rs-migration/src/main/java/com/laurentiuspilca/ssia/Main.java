@@ -2,7 +2,6 @@ package com.laurentiuspilca.ssia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.util.Base64;
@@ -11,7 +10,6 @@ import java.util.Base64;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Main.class, args);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

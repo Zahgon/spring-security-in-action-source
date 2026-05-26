@@ -5,7 +5,6 @@ import com.laurentiuspilca.ssia.repositories.WorkoutRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -16,14 +15,14 @@ public class WorkoutService {
 
     @PreAuthorize("#workout.user == authentication.name and #oauth2.hasScope('fitnessapp')")
     public void saveWorkout(Workout workout) {
-        workoutRepository.save(workout);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Workout> findWorkouts() {
-        return workoutRepository.findAllByUser();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void deleteWorkout(Integer id) {
-        workoutRepository.deleteById(id);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

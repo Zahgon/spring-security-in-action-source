@@ -3,7 +3,6 @@ package com.laurentiuspilca.ssia.services;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
 import java.util.List;
 
 public class InMemoryUserDetailsService implements UserDetailsService {
@@ -16,9 +15,6 @@ public class InMemoryUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return users.stream()
-                .filter(u -> u.getUsername().equals(username))
-                .findFirst()
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -15,6 +15,6 @@ public class BookController {
 
     @GetMapping("/book/details/{name}")
     public Employee getDetails(@PathVariable String name) {
-        return bookService.getBookDetails(name);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

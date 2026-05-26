@@ -16,29 +16,16 @@ public class ProjectConfig {
 
     @Bean
     public ReactiveUserDetailsService userDetailsService() {
-        var  u = User.withUsername("john")
-                .password("12345")
-                .authorities("read")
-                .build();
-
-        var uds = new MapReactiveUserDetailsService(u);
-
-        return uds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http.authorizeExchange()
-                .pathMatchers(HttpMethod.GET, "/hello").authenticated()
-                .anyExchange().permitAll()
-                    .and()
-                .httpBasic()
-                    .and()
-                .build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

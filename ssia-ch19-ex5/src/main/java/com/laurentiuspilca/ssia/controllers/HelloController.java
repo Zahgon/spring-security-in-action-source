@@ -11,7 +11,6 @@ public class HelloController {
     @GetMapping("/hello")
     @PreAuthorize("hasRole('ADMIN')")
     public Mono<String> hello() {
-        return Mono.just("Hello!");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

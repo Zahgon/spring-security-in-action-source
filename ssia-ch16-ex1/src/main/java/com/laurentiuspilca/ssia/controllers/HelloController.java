@@ -13,6 +13,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, " + nameService.getName();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

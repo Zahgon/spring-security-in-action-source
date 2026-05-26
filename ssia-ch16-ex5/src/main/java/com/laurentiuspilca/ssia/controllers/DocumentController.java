@@ -15,6 +15,6 @@ public class DocumentController {
 
     @GetMapping("/documents/{code}")
     public Document getDetails(@PathVariable String code) {
-        return documentService.getDocument(code);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

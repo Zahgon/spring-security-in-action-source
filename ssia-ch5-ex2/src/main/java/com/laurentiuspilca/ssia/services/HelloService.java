@@ -10,8 +10,6 @@ public class HelloService {
 
     @Async
     public String getName() {
-        SecurityContext context = SecurityContextHolder.getContext();
-        String username = context.getAuthentication().getName();
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

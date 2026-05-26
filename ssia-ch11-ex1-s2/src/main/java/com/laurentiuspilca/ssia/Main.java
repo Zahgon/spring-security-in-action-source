@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServic
 public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

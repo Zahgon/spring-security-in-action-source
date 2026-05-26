@@ -16,31 +16,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public UserDetailsService uds() {
-        var uds = new InMemoryUserDetailsManager();
-
-        var u = User.withUsername("john")
-                .password("12345")
-                .authorities("read")
-                .build();
-
-        uds.createUser(u);
-
-        return uds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

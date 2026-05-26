@@ -13,7 +13,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -31,29 +30,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
-        auth.authenticationProvider(otpAuthenticationProvider)
-            .authenticationProvider(usernamePasswordAuthenticationProvider);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-
-        http.addFilterAt(
-                initialAuthenticationFilter,
-                BasicAuthenticationFilter.class)
-            .addFilterAfter(
-                jwtAuthenticationFilter,
-                BasicAuthenticationFilter.class
-            );
-
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     @Bean
     protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -18,8 +18,7 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthServerConfig
-        extends AuthorizationServerConfigurerAdapter {
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Value("${password}")
     private String password;
@@ -35,44 +34,26 @@ public class AuthServerConfig
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .secret("secret")
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("read")
-             .and()
-                .withClient("resourceserver")
-                .secret("resourceserversecret");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints
-          .authenticationManager(authenticationManager)
-          .tokenStore(tokenStore())
-          .tokenEnhancer(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
-        var converter = new JwtAccessTokenConverter();
-
-        KeyStoreKeyFactory keyStoreKeyFactory =
-                new KeyStoreKeyFactory(
-                        new ClassPathResource(privateKey),
-                        password.toCharArray());
-        converter.setKeyPair(keyStoreKeyFactory.getKeyPair(alias));
-
-        return converter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) {
-        security.tokenKeyAccess("isAuthenticated()");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -9,7 +9,6 @@ public class MainController {
 
     @GetMapping("/")
     public String main(OAuth2AuthenticationToken token) {
-        System.out.println(token.getPrincipal());
-        return "main.html";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -17,14 +17,11 @@ public class UsernamePasswordAuthenticationProvider implements AuthenticationPro
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getName();
-        String password = String.valueOf(authentication.getCredentials());
-        proxy.sendAuth(username, password);
-        return new UsernamePasswordAuthenticationToken(username, password);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return UsernamePasswordAuthentication.class.isAssignableFrom(aClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

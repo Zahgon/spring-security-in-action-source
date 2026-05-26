@@ -12,26 +12,11 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public CsrfTokenRepository customTokenRepository() {
-        return new CustomCsrfTokenRepository();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf(c -> {
-            c.csrfTokenRepository(customTokenRepository());
-            c.ignoringAntMatchers("/ciao");
-
-//            HandlerMappingIntrospector i = new HandlerMappingIntrospector();
-//            MvcRequestMatcher r = new MvcRequestMatcher(i, "/ciao");
-//            c.ignoringRequestMatchers(r);
-
-//            String pattern = ".*[0-9].*";
-//            String httpMethod = HttpMethod.POST.name();
-//            RegexRequestMatcher r = new RegexRequestMatcher(pattern, httpMethod);
-//            c.ignoringRequestMatchers(r);
-        });
-
-        http.authorizeRequests()
-             .anyRequest().permitAll();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -11,10 +11,6 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.addFilterAfter(
-                new CsrfTokenLogger(),
-                CsrfFilter.class)
-                .authorizeRequests()
-                    .anyRequest().permitAll();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

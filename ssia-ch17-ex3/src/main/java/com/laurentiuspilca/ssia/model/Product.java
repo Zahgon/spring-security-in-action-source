@@ -3,6 +3,7 @@ package com.laurentiuspilca.ssia.model;
 public class Product {
 
     private String name;
+
     private String owner;
 
     public Product(String name, String owner) {
@@ -11,18 +12,18 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getOwner() {
-        return owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setOwner(String owner) {
-        this.owner = owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -8,7 +8,6 @@ public class HelloController {
 
     @GetMapping("/home")
     public String home() {
-        return "home.html";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

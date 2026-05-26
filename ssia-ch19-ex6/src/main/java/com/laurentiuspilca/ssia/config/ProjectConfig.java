@@ -14,16 +14,6 @@ public class ProjectConfig {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http
-                .authorizeExchange()
-                    .anyExchange().authenticated()
-                .and()
-                .oauth2ResourceServer()
-                    .jwt(jwtSpec -> {
-                        jwtSpec.jwkSetUri(jwkEndpoint);
-                    })
-                .and()
-                .build();
-
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

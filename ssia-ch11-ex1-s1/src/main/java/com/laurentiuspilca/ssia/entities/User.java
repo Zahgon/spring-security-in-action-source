@@ -8,21 +8,22 @@ public class User {
 
     @Id
     private String username;
+
     private String password;
 
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getPassword() {
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -15,8 +15,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthServerConfig
-        extends AuthorizationServerConfigurerAdapter {
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Value("${jwt.key}")
     private String jwtKey;
@@ -26,30 +25,21 @@ public class AuthServerConfig
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .secret("secret")
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("read");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints
-          .authenticationManager(authenticationManager)
-          .tokenStore(tokenStore())
-          .accessTokenConverter(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
-        var converter = new JwtAccessTokenConverter();
-        converter.setSigningKey(jwtKey);
-        return converter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

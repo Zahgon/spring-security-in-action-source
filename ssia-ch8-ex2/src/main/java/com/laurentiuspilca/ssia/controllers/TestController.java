@@ -9,21 +9,21 @@ public class TestController {
 
     @PostMapping("/a")
     public String postEndpointA() {
-        return "Works!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @GetMapping("/a")
     public String getEndpointA() {
-        return "Works!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @GetMapping("/a/b")
     public String getEnpointB() {
-        return "Works!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @GetMapping("/a/b/c")
     public String getEnpointC() {
-        return "Works!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

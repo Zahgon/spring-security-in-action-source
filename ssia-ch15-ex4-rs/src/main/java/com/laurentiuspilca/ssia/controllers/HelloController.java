@@ -10,9 +10,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(OAuth2Authentication authentication) {
-        OAuth2AuthenticationDetails details =
-                (OAuth2AuthenticationDetails) authentication.getDetails();
-
-        return "Hello! " + details.getDecodedDetails();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -14,6 +14,6 @@ public class DocumentService {
 
     @PreAuthorize("hasPermission(#code, 'document', 'ROLE_admin')")
     public Document getDocument(String code) {
-        return documentRepository.findDocument(code);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -8,7 +8,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
-
 import javax.sql.DataSource;
 
 @Configuration
@@ -20,11 +19,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
-        resources.tokenStore(tokenStore());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JdbcTokenStore(dataSource);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

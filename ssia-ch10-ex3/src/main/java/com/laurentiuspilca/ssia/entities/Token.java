@@ -13,29 +13,30 @@ public class Token {
     private int id;
 
     private String identifier;
+
     private String token;
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIdentifier(String identifier) {
-        this.identifier = identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getToken() {
-        return token;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setToken(String token) {
-        this.token = token;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

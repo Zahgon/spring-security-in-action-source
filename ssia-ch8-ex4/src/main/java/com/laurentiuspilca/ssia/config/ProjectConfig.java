@@ -9,10 +9,6 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-
-        http.authorizeRequests()
-                .mvcMatchers( "/product/{code:^[0-9]*$}").permitAll()
-                .anyRequest().denyAll();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

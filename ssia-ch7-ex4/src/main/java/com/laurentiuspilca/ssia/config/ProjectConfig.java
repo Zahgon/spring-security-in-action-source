@@ -16,35 +16,16 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
     @Override
     @Bean
     public UserDetailsService userDetailsService() {
-        var manager = new InMemoryUserDetailsManager();
-
-        var user1 = User.withUsername("john")
-                .password("12345")
-                .authorities("read")
-                .build();
-
-        var user2 = User.withUsername("jane")
-                .password("12345")
-                .authorities("read", "write", "delete")
-                .build();
-
-        manager.createUser(user1);
-        manager.createUser(user2);
-
-        return manager;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-
-
-        http.authorizeRequests()
-                .anyRequest().access("T(java.time.LocalTime).now().isAfter(T(java.time.LocalTime).of(12, 0))");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

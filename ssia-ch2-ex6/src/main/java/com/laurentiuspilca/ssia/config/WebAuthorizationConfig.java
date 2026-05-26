@@ -9,7 +9,6 @@ public class WebAuthorizationConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-        http.authorizeRequests().anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

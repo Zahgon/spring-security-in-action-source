@@ -16,26 +16,26 @@ public class Authority {
     private User user;
 
     public Integer getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public User getUser() {
-        return user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUser(User user) {
-        this.user = user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

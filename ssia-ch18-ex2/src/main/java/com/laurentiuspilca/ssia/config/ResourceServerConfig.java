@@ -29,31 +29,26 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
-        resources.tokenStore(tokenStore());
-        resources.resourceId(claimAud);
-        resources.expressionHandler(handler());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JwkTokenStore(urlJwk);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .mvcMatchers(HttpMethod.DELETE, "/**").hasAuthority("fitnessadmin")
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
-        return new SecurityEvaluationContextExtension();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public SecurityExpressionHandler<FilterInvocation> handler() {
-        return new OAuth2WebSecurityExpressionHandler();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

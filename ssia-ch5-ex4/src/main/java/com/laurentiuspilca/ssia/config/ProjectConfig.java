@@ -18,13 +18,6 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin()
-            .successHandler(authenticationSuccessHandler)
-            .failureHandler(authenticationFailureHandler)
-        .and()
-            .httpBasic();
-
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

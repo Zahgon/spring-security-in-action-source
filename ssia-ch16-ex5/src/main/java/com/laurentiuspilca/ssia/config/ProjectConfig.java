@@ -23,35 +23,16 @@ public class ProjectConfig extends GlobalMethodSecurityConfiguration {
 
     @Override
     protected MethodSecurityExpressionHandler createExpressionHandler() {
-        var expressionHandler =
-                new DefaultMethodSecurityExpressionHandler();
-        expressionHandler.setPermissionEvaluator(evaluator);
-
-        return expressionHandler;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public UserDetailsService userDetailsService() {
-        var service = new InMemoryUserDetailsManager();
-
-        var u1 = User.withUsername("natalie")
-                    .password("12345")
-                    .roles("admin")
-                .build();
-
-        var u2 = User.withUsername("emma")
-                .password("12345")
-                .roles("manager")
-                .build();
-
-        service.createUser(u1);
-        service.createUser(u2);
-
-        return service;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

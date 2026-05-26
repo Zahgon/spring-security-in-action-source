@@ -15,13 +15,11 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
-        auth.authenticationProvider(authenticationProvider);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

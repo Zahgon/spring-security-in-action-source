@@ -21,19 +21,11 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) {
-        String username = authentication.getName();
-        String password = authentication.getCredentials().toString();
-
-        UserDetails u = userDetailsService.loadUserByUsername(username);
-        if (passwordEncoder.matches(password, u.getPassword())) {
-            return new UsernamePasswordAuthenticationToken(username, password, u.getAuthorities());
-        } else {
-            throw new BadCredentialsException("Something went wrong!");
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean supports(Class<?> authenticationType) {
-        return authenticationType.equals(UsernamePasswordAuthenticationToken.class);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

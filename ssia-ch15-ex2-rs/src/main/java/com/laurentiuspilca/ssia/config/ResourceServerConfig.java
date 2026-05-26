@@ -19,18 +19,16 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
-        resources.tokenStore(tokenStore());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
-        var converter = new JwtAccessTokenConverter();
-        converter.setVerifierKey(publicKey);
-        return converter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

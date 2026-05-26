@@ -15,13 +15,11 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
-
 import java.util.List;
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthServerConfig
-        extends AuthorizationServerConfigurerAdapter {
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Value("${password}")
     private String password;
@@ -37,44 +35,21 @@ public class AuthServerConfig
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .secret("secret")
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("read");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
-
-        var tokenEnhancers =
-                List.of(new CustomTokenEnhancer(),
-                        jwtAccessTokenConverter());
-
-        tokenEnhancerChain.setTokenEnhancers(tokenEnhancers);
-
-        endpoints
-          .authenticationManager(authenticationManager)
-          .tokenStore(tokenStore())
-          .tokenEnhancer(tokenEnhancerChain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
-        var converter = new JwtAccessTokenConverter();
-
-        KeyStoreKeyFactory keyStoreKeyFactory =
-                new KeyStoreKeyFactory(
-                        new ClassPathResource(privateKey),
-                        password.toCharArray());
-        converter.setKeyPair(keyStoreKeyFactory.getKeyPair(alias));
-
-        return converter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

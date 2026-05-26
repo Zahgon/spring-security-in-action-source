@@ -9,16 +9,16 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String getHello() {
-        return "Get Hello!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @PostMapping("/hello")
     public String postHello() {
-        return "Post Hello!";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @PostMapping("/ciao")
     public String postCiao() {
-        return "Post Ciao";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

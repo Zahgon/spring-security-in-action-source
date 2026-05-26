@@ -9,7 +9,6 @@ public class TestController {
 
     @GetMapping("/email/{email}")
     public String video(@PathVariable String email) {
-        return "Allowed for email " + email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

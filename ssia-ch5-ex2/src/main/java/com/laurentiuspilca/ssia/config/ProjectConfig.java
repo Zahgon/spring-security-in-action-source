@@ -12,6 +12,6 @@ public class ProjectConfig {
 
     @Bean
     public InitializingBean initializingBean() {
-        return () -> SecurityContextHolder.setStrategyName(SecurityContextHolder.MODE_INHERITABLETHREADLOCAL);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

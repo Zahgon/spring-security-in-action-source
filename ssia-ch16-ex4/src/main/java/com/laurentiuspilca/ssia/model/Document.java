@@ -11,23 +11,20 @@ public class Document {
     }
 
     public String getOwner() {
-        return owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setOwner(String owner) {
-        this.owner = owner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Document document = (Document) o;
-        return Objects.equals(owner, document.owner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(owner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

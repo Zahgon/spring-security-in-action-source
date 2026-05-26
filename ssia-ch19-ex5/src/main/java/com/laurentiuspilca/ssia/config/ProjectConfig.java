@@ -15,24 +15,11 @@ public class ProjectConfig {
 
     @Bean
     public ReactiveUserDetailsService userDetailsService() {
-        var  u1 = User.withUsername("john")
-                .password("12345")
-                .roles("ADMIN")
-                .build();
-
-        var  u2 = User.withUsername("bill")
-                .password("12345")
-                .roles("REGULAR_USER")
-                .build();
-
-        var uds = new MapReactiveUserDetailsService(u1, u2);
-
-        return uds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

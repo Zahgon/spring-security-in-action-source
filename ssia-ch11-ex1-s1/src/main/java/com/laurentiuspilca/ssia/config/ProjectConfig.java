@@ -12,13 +12,11 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.authorizeRequests()
-                .anyRequest().permitAll();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

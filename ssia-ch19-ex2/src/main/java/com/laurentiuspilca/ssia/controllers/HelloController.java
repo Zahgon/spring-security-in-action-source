@@ -10,10 +10,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public Mono<String> hello() {
-        Mono<String> message =
-                ReactiveSecurityContextHolder.getContext()
-                        .map(context -> context.getAuthentication())
-                        .map(auth -> "Hello " + auth.getName());
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

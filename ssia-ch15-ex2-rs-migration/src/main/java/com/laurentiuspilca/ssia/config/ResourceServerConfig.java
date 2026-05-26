@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
-
 import java.security.KeyFactory;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.X509EncodedKeySpec;
@@ -21,27 +20,11 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.oauth2ResourceServer(
-                c -> c.jwt(
-                        j -> j.decoder(jwtDecoder())
-                )
-        );
-
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Bean
     public JwtDecoder jwtDecoder() {
-        try {
-            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            var key = Base64.getDecoder().decode(publicKey);
-
-            var x509 = new X509EncodedKeySpec(key);
-            var rsaKey = (RSAPublicKey) keyFactory.generatePublic(x509);
-            return NimbusJwtDecoder.withPublicKey(rsaKey).build();
-        } catch (Exception e) {
-            throw new RuntimeException("Wrong public key");
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

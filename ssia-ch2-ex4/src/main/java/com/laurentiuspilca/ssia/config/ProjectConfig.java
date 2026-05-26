@@ -11,17 +11,11 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("john")
-                .password("12345")
-                .authorities("read")
-        .and()
-            .passwordEncoder(NoOpPasswordEncoder.getInstance());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-        http.authorizeRequests().anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

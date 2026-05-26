@@ -12,48 +12,52 @@ public class Workout {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String user;
+
     private LocalDateTime start;
+
     private LocalDateTime end;
+
     private int difficulty;
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getUser() {
-        return user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUser(String user) {
-        this.user = user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public LocalDateTime getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStart(LocalDateTime start) {
-        this.start = start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public LocalDateTime getEnd() {
-        return end;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEnd(LocalDateTime end) {
-        this.end = end;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getDifficulty() {
-        return difficulty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDifficulty(int difficulty) {
-        this.difficulty = difficulty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

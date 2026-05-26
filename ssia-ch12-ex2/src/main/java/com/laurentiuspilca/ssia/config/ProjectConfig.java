@@ -13,12 +13,7 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.oauth2Login(c -> {
-            c.clientRegistrationRepository(clientRepository());
-        });
-
-        http.authorizeRequests()
-                .anyRequest().authenticated();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private ClientRegistrationRepository clientRepository() {
@@ -27,9 +22,6 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
     }
 
     private ClientRegistration clientRegistration() {
-        return CommonOAuth2Provider.GITHUB.getBuilder("github")
-                .clientId("a7553955a0c534ec5e6b")
-                .clientSecret("1795b30b425ebb79e424afa51913f1c724da0dbb")
-                .build();
+        return CommonOAuth2Provider.GITHUB.getBuilder("github").clientId("a7553955a0c534ec5e6b").clientSecret("1795b30b425ebb79e424afa51913f1c724da0dbb").build();
     }
 }
